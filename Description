@@ -73,6 +73,8 @@ QQQ 78.2% BUY
 AAPL 61.7% NO TRADE
 NVDA 84.9% BUY
 
+**these are just examples for refrence
+
 Only predictions above the confidence threshold are considered trade candidates.
 
 Tech Stack
@@ -85,3 +87,5 @@ Yahoo Finance API (yfinance)
 Disclaimer
 
 This project is intended for educational and research purposes only. Past performance does not guarantee future results, and no investment decisions should be made solely based on model predictions.
+Please critique me ! that is the only way i can grow. 
+Thanks guys and good luck ! 
