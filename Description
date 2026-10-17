@@ -1,0 +1,87 @@
+AI Swing Trading Signal Generator
+
+A machine learning-powered stock trading system that scans major stocks and ETFs to identify high-probability swing trade opportunities.
+
+The model analyzes over 10 years of market data and uses technical indicators, trend analysis, volatility measurements, and market sentiment data to predict whether a stock is likely to move higher over the next 5 trading days.
+
+Features
+Downloads 10 years of historical market data using Yahoo Finance
+Uses XGBoost classification to predict short-term price direction
+Evaluates multiple stocks simultaneously:
+SPY
+QQQ
+AAPL
+MSFT
+NVDA
+AMD
+META
+AMZN
+Incorporates market sentiment using VIX data
+Calculates technical indicators including:
+RSI
+EMA20 / EMA50 / EMA200
+Relative Strength vs SPY
+Volume Ratios
+Volatility
+Momentum Returns
+Distance from 52-Week High
+Generates confidence-based BUY signals
+Includes built-in backtesting and performance reporting
+Machine Learning Features
+
+The model evaluates market conditions using:
+
+Trend strength
+Momentum
+Volume activity
+Volatility
+Market regime
+Relative market performance
+Fear/greed conditions through VIX analysis
+
+Each day is classified as:
+
+1 = Positive return expected within 5 trading days
+0 = No positive return expected
+Model Training
+
+The system:
+
+Builds a combined dataset from all selected tickers
+Creates engineered features from technical indicators
+Trains an XGBoost classifier
+Tests predictions on unseen historical data
+Filters trades using a minimum confidence threshold (75%)
+Performance Analysis
+
+After training, the script automatically generates:
+
+Classification Report
+Precision / Recall / F1 Scores
+Feature Importance Rankings
+Historical Backtest Results
+Average Trade Return
+Win Rate
+Profit Factor
+Live Signal Generation
+
+The latest market data is evaluated in real time and each ticker receives:
+
+Plain Text
+SPY 81.4% BUY
+QQQ 78.2% BUY
+AAPL 61.7% NO TRADE
+NVDA 84.9% BUY
+
+Only predictions above the confidence threshold are considered trade candidates.
+
+Tech Stack
+Python
+Pandas
+NumPy
+XGBoost
+Scikit-Learn
+Yahoo Finance API (yfinance)
+Disclaimer
+
+This project is intended for educational and research purposes only. Past performance does not guarantee future results, and no investment decisions should be made solely based on model predictions.
